@@ -1,0 +1,40 @@
+<div id="postHeader" class="medium-width" ng-include="postHeaderTemplate"></div>
+<hr class="greek-divider">
+<div id="postBody" class="box-vert-lg full-w">
+    <div ng-if="data.body.allowRightSidebar == true" class="medium-width col-mobile">
+        <div id="postBodyLeft" class="col max-width-is-medium">
+            <div ng-repeat="body in data.body.content" class="col">
+                <div ng-if="body.type == 'paragraph'" class="col">
+                    <div class="medium-width post-paragraph box-hort-sm wrap-vert-lg">
+                        {{body.content}}
+                    </div>
+                </div>
+                <div ng-if="body.type == 'standardPhoto'" class="full-w col a-center box-vert-sm">
+                    <img class="post-standard-photo" src="{{body.source}}" alt="{{body.alt}}">
+                    <div class="post-standard-photo wrap-vert-lg a-center">
+                        <div class="wrap-vert-lg bg-pri white wrap-hort-lg subtitle sm rounded max-content-w">Photo</div>
+                        <div class="title sm wrap-hort-md">{{body.attribution}}</div>
+                    </div>
+                    <div class="post-standard-photo a-center subtitle rg">
+                        {{body.caption}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="postBodyRight" class="post-side-bar">
+            <div ng-if="data.hasReferenceProject" class="box-hort-md" ng-include="projectCardTemplate">
+            </div>
+        </div>
+    </div>
+    <div ng-if="data.body.allowRightSidebar !== true" class="full-w col">
+        <div id="postBodyLeft" class="col full-w">
+            <div ng-repeat="body in data.body.content" class="full-w col">
+                <div ng-if="body.type == 'paragraph'" class="full-w col">
+                    <div class="medium-width post-paragraph box-hort-sm wrap-vert-lg">
+                        {{body.content}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

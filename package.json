@@ -1,0 +1,22 @@
+{
+  "name": "project-mindanao",
+  "version": "1.0.0",
+  "description": "Official repository for Mindanao Economic Boom website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rterrado/project-mindanao.git"
+  },
+  "author": "Ken Terrado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rterrado/project-mindanao/issues"
+  },
+  "homepage": "https://github.com/rterrado/project-mindanao#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

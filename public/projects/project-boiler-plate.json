@@ -1,0 +1,16 @@
+{
+    "title":"Robinsons Place Pagadian",
+    "location":{
+        "islandGroup":"Mindanao",
+        "region":"Northern Mindanao",
+        "province":"Zamboanga del Norte",
+        "city":"Pagadian",
+        "streetAddress":"no",
+        "town":"no"
+    },
+    "about":{
+        "cost":"unknown",
+        "developer":"Robinsons Land Incorporated",
+        "type":"Shopping Mall"
+    }
+}

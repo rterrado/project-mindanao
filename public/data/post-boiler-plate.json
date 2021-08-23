@@ -1,0 +1,33 @@
+{
+	"title": "This is a post boiler plate",
+    "hasReferenceProject": true,
+    "referenceProject":"project-boiler-plate",
+    "projectCardTemplate":"projectCardTemplate",
+    "postTemplate":"standardArticleTemplate",
+	"header": {
+		"template": "standardPostHeader",
+		"date": "July 8, 2021",
+		"authorHandle": "kterrado",
+		"title": "What we know about Robinsons Pagadian Project so far"
+	},
+	"body": {
+        "allowRightSidebar": true,
+		"content": [
+            {
+    			"type": "paragraph",
+    			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris hendrerit vitae ipsum in porttitor. Nullam laoreet ex at leo porta maximus. Duis quis massa orci. Nunc ut volutpat felis. Donec at maximus erat, id aliquam felis. "
+    		},
+            {
+                "type": "paragraph",
+                "content":"Nullam sed orci vitae arcu tempus molestie non eu velit. Nulla facilisi. Praesent eget mi ac justo tincidunt fringilla. Aliquam vel metus mi. "
+            },
+            {
+                "type": "standardPhoto",
+                "source":"https://upload.wikimedia.org/wikipedia/commons/6/60/F_S_Pajares_Ave_Pagadian_City.JPG",
+                "attribution":"Photo credit to Ken Terrado",
+                "caption":"Donec varius eros dui, in ultricies est luctus nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+            }
+        ]
+
+	}
+}

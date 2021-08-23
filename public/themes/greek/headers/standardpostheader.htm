@@ -1,0 +1,14 @@
+<div class="medium-width distance-from-header-lg box-hort-sm col">
+    <div class="post-date wrap-vert-lg">{{data.header.date}}</div>
+    <div class="post-title">{{data.header.title}}</div>
+    <div class="author-profile box-vert-md a-center">
+        <div class="profile-photo small" style="background-size: cover; background-position: center;" ng-style="{'background-image': 'url(' + author.photo + ')'}"></div>
+        <div class="author-profile-details box-hort-lg col">
+            <div class="title rg">{{author.firstName}} {{author.lastName}} <span class="author-handle">@{{author.handle}}</span></div>
+            <div class="subtitle rg wrap-vert-xs express-desktop">{{author.about}}</div>
+            <div class="wrap-vert-lg">
+                <button id="viewProfile" class="bg-pri wrap-vert-md wrap-hort-lg white max-content-w rounded subtitle rg" type="button" name="button">View Profile</button>
+            </div>
+        </div>
+    </div>
+</div>
