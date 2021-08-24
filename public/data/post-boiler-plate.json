@@ -26,7 +26,21 @@
                 "source":"https://upload.wikimedia.org/wikipedia/commons/6/60/F_S_Pajares_Ave_Pagadian_City.JPG",
                 "attribution":"Photo credit to Ken Terrado",
                 "caption":"Donec varius eros dui, in ultricies est luctus nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-            }
+            },
+			{
+				"type":"paragraph",
+				"content":"Quisque nibh tellus, faucibus vel egestas id, dapibus imperdiet libero. Vestibulum dui arcu, porta eget euismod a, accumsan eget elit."
+			},
+			{
+				"type":"standardQoute",
+				"author":"Mayor Bing Loizaga",
+				"authorLabel":"City Mayor, Zamboanga City",
+				"content":"Vivamus sed ante sed ante bibendum convallis. Aliquam ut finibus velit. Etiam id ante ac justo rhoncus scelerisque."
+			},
+			{
+				"type":"paragraph",
+				"content":"Aliquam ut faucibus nunc, vitae laoreet dui. Morbi erat lacus, interdum sit amet elementum quis, dictum aliquet sapien. Etiam porttitor sodales leo sed luctus. Nullam ut purus et mi porta sagittis. Donec dictum, purus nec consectetur ullamcorper, urna purus sollicitudin magna, quis aliquet nibh massa ut nisi."
+			}
         ]
 
 	}

@@ -11,13 +11,25 @@
                 </div>
                 <div ng-if="body.type == 'standardPhoto'" class="full-w col a-center box-vert-sm">
                     <img class="post-standard-photo" src="{{body.source}}" alt="{{body.alt}}">
-                    <div class="post-standard-photo wrap-vert-lg a-center">
+                    <div class="post-standard-photo wrap-vert-lg a-center wrap-hort-xl">
                         <div class="wrap-vert-lg bg-pri white wrap-hort-lg subtitle sm rounded max-content-w">Photo</div>
-                        <div class="title sm wrap-hort-md">{{body.attribution}}</div>
+                        <div class="title sm wrap-hort-md wrap-hort-xl">{{body.attribution}}</div>
                     </div>
-                    <div class="post-standard-photo a-center subtitle rg">
+                    <div class="post-standard-photo a-center subtitle rg wrap-hort-xl">
                         {{body.caption}}
                     </div>
+                </div>
+                <div ng-if="body.type == 'standardQoute'" class="a-center box-vert-sm col">
+                    <hr class="greek-divider full-w">
+                    <div class="box-vert-sm"></div>
+                    <div class="half-at-desktop col box-hort-sm">
+                        <div class="quote-content"><span class="quote-icon">“</span>{{body.content}}</div>
+                        <div class="wrap-vert-md"></div>
+                        <div class="title rg j-center">{{body.author}}</div>
+                        <div class="subtitle rg j-center">{{body.authorLabel}}</div>
+                    </div>
+                    <div class="box-vert-sm"></div>
+                    <hr class="greek-divider full-w">
                 </div>
             </div>
         </div>

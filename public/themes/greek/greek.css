@@ -162,6 +162,16 @@ button {
     .post-standard-photo {
         width: 100%;
     }
+    .quote-content {
+        font-size: 20px;
+        line-height: 30px;
+        font-family: 'Roboto';
+        font-weight: 800;
+    }
+    .quote-icon {
+        font-size: 50px;
+        font-family: 'Times New Roman';
+    }
 }
 
 
@@ -228,6 +238,16 @@ button {
     .post-standard-photo {
         width: 90%;
     }
+    .quote-content {
+        font-size: 20px;
+        line-height: 30px;
+        font-family: 'Roboto';
+        font-weight: 800;
+    }
+    .quote-icon {
+        font-size: 50px;
+        font-family: 'Times New Roman';
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -282,6 +302,16 @@ button {
     }
     .post-standard-photo {
         width: 90%;
+    }
+    .quote-content {
+        font-size: 22px;
+        line-height: 30px;
+        font-family: 'Roboto';
+        font-weight: 800;
+    }
+    .quote-icon {
+        font-size: 50px;
+        font-family: 'Times New Roman';
     }
 }
 
@@ -338,6 +368,16 @@ button {
     .post-standard-photo {
         width: 85%;
     }
+    .quote-content {
+        font-size: 24px;
+        line-height: 32px;
+        font-family: 'Roboto';
+        font-weight: 800;
+    }
+    .quote-icon {
+        font-size: 52px;
+        font-family: 'Times New Roman';
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -392,5 +432,15 @@ button {
     }
     .post-standard-photo {
         width: 85%;
+    }
+    .quote-content {
+        font-size: 24px;
+        line-height: 32px;
+        font-family: 'Roboto';
+        font-weight: 800;
+    }
+    .quote-icon {
+        font-size: 52px;
+        font-family: 'Times New Roman';
     }
 }

@@ -16,14 +16,17 @@ app.factory('data',function($http){
         projectSource:'http://localhost:3000/projects/',
         getPost: async function(path){
             let dataPath = this.dataSource+path.split('/')[2]+'.json';
+            console.log(path.split('/'));
             return await $http.get(dataPath);
         },
         getAuthor: async function(handle){
             let dataPath = this.authorSource+handle+'.json';
+            console.log(handle);
             return await $http.get(dataPath);
         },
         getProject: async function(handle){
             dataPath = this.projectSource+handle+'.json';
+            console.log(handle);
             return await $http.get(dataPath);
         }
     }
