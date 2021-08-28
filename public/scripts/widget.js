@@ -14,19 +14,21 @@ app.factory('data',function($http){
         dataSource: 'http://localhost:3000/data/',
         authorSource: 'http://localhost:3000/authors/',
         projectSource:'http://localhost:3000/projects/',
+        indexSource:'http://localhost:3000/indexes/',
         getPost: async function(path){
             let dataPath = this.dataSource+path.split('/')[2]+'.json';
-            console.log(path.split('/'));
             return await $http.get(dataPath);
         },
         getAuthor: async function(handle){
             let dataPath = this.authorSource+handle+'.json';
-            console.log(handle);
             return await $http.get(dataPath);
         },
         getProject: async function(handle){
             dataPath = this.projectSource+handle+'.json';
-            console.log(handle);
+            return await $http.get(dataPath);
+        },
+        getIndex: async function(indexFor){
+            dataPath = this.indexSource+indexFor+'.json';
             return await $http.get(dataPath);
         }
     }
@@ -37,11 +39,60 @@ app.factory('theme', function(){
         'header':'/themes/greek/header.htm',
         'notFound':'/themes/greek/404.htm',
         'main':'/themes/greek/main.htm',
+        'projectPage':'/themes/greek/project-page.htm',
         'standardPostHeader':'/themes/greek/headers/standardpostheader.htm',
         'projectCardTemplate':'/themes/greek/cards/project-card-template.htm',
-        'standardArticleTemplate':'/themes/greek/posts/standard-article.htm'
+        'standardArticleTemplate':'/themes/greek/posts/standard-article.htm',
+        'standardListingTemplate':'/themes/greek/listings/standard-listing-template.htm'
     };
 });
+
+
+app.controller('mainCtrl', function(
+    $templateRequest,
+    $sce,
+    $compile,
+    $scope,
+    $http,
+    theme
+    ){
+
+    $scope.isRender = true;
+
+    $scope.render = function(render) {
+        $scope.data = [],
+        $templateRequest($sce.getTrustedResourceUrl(render.component)).then(function(theme) {
+            if (render.data !== 'undefined') {
+                angular.forEach(render.data, function(value, key) {
+                    $scope.data[key] = value;
+                });
+            }
+            $compile($('#' + render.element).append(theme))($scope);
+        });
+    }
+
+    $scope.renderHeader = function(){
+        $scope.render({
+            element: 'header',
+            component: theme.header,
+            kind: 'header',
+            data: 'undefined'
+        });
+    }
+
+    $scope.showNotFound = function(){
+        $scope.renderHeader();
+        $scope.render({
+            element: 'main',
+            component: theme.notFound,
+            kind: 'page',
+            data: 'undefined'
+        });
+        $scope.isRender = false;
+    }
+
+});
+
 
 app.controller('postCtrl', function(
     $templateRequest,
@@ -138,7 +189,56 @@ app.controller('postCtrl', function(
     }
 
 
-
-
-
 });
+
+app.controller('projectCtrl', function(
+    $scope,
+    widget,
+    data,
+    theme
+    ){
+
+    $scope.getListing = function(){
+        data.getIndex("projects").then(function(response){
+
+            $scope.project = response.data;
+            $scope.project.listingTemplate = theme[response.data.projectListingTemplate];
+
+            $scope.project.selectedListingRegion = 'mindanao';
+
+            $scope.project.selectListingRegion = function(region){
+                if ($scope.project.selectedListingRegion===region) {
+                    return true;
+                }
+                return false;
+            }
+
+            $scope.project.setListingRegion = function(param){
+                $scope.project.selectedListingRegion = param;
+                $scope.setSelectedProjectTab(param);
+            }
+
+            $scope.$parent.renderHeader();
+            $scope.render({
+                element: 'main',
+                component: theme.projectPage,
+                kind: 'page',
+                data: $scope.project
+            });
+            $scope.$parent.isRender = false;
+            return;
+        }).catch(function(){
+            $scope.$parent.showNotFound();
+        });
+    }
+
+    $scope.getListing();
+
+    $scope.setSelectedProjectTab = function(project){
+        $('.listing-bar-item').removeClass('active-listing-bar-item');
+        $('.listing-bar-'+project).addClass('active-listing-bar-item');
+        $('.has-selected-region').hide();
+    }
+
+
+    });

@@ -10,6 +10,7 @@ div, section, span, p, body, ul, li {
 .col-rev {flex-direction: column-reverse;}
 
 .device-h {height:100vh}
+.full-h {height: 100%;}
 .full-w {width:100%;}
 .half-w {width: 50%;}
 

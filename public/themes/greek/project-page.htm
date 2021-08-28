@@ -1,0 +1,45 @@
+<div class="page-header cont-vert-lg box-hort-md">
+    <div class="medium-width col">
+        <div class="post-title">Mindanao Projects</div>
+        <div class="wrap-vert-xs"></div>
+        <div class="subtitle lg">All current development projects Mindanao</div>
+    </div>
+</div>
+<div class="listing-bar express-desktop">
+    <ul class="medium-width full-h">
+        <li class="title rg full-h a-center listing-bar-item listing-bar-zamboanga" ng-click="data.setListingRegion('zamboanga')">Zamboanga Region</li>
+        <li class="title rg box-hort-sm full-h a-center listing-bar-item"></li>
+        <li class="title rg box-hort-lg full-h a-center listing-bar-item listing-bar-northernmindanao" ng-click="data.setListingRegion('northernmindanao')">Northern Mindanao</li>
+        <li class="title rg box-hort-lg full-h a-center listing-bar-item listing-bar-caraga">CARAGA</li>
+        <li class="title rg box-hort-lg full-h a-center listing-bar-item listing-bar-davao">Davao Region</li>
+        <li class="title rg box-hort-lg full-h a-center listing-bar-item listing-bar-sox">SOCCSKSARGEN</li>
+        <li class="title rg box-hort-lg full-h a-center listing-bar-item listing-bar-armm">ARMM</li>
+    </ul>
+</div>
+<div class="listing-select-option express-mobile full-w wrap-hort-md">
+    <select class="greek-input-select full-w box-hort-md box-vert-md title rg">
+        <option class="title rg has-selected-region">Please select a region</option>
+        <option class="title rg" ng-click="data.setListingRegion('zamboanga')">Zamboanga Region</option>
+        <option class="title rg" ng-click="data.setListingRegion('northernmindanao')">Northern Mindanao</option>
+        <option class="title rg">Davao Region</option>
+        <option class="title rg">SOCCSKSARGEN</option>
+        <option class="title rg">ARMM</option>
+    </select>
+</div>
+</div>
+<div class="development-bar">
+    <div id="zamboanga_region" class="full-w col" ng-if="data.selectListingRegion('zamboanga') == true">
+        <div id="zamboanga_city" class="full-w col box-vert-md">
+            <div class="dev-item-header box-vert-md box-hort-md"><div class="medium-width subtitle rg">Zamboanga City</div></div>
+            <div class="collapsible medium-width col box-hort-md">
+                <div ng-include="data.listingTemplate" ng-repeat="projectItem in data.index.zamboanga.zamboangaCity" class="col"></div>
+            </div>
+        </div>
+        <div id="zamboanga_del_sur" class="full-w col box-vert-lg">
+            <div class="dev-item-header box-vert-md box-hort-md"><div class="medium-width subtitle rg">Zamboanga Del Sur</div></div>
+            <div class="collapsible medium-width col box-hort-md">
+                <div ng-include="data.listingTemplate" ng-repeat="projectItem in data.index.zamboanga.zamboangaDelSur" class="col"></div>
+            </div>
+        </div>
+    </div>
+</div>

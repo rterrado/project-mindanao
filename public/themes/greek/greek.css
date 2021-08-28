@@ -93,6 +93,16 @@ button {
     width: 100%;
 }
 
+.listing-bar {
+    background-color: #eaeaea;
+    height: 100px;
+}
+
+.dev-item-header {
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
 
 
 .height-after-header {height: 85vh;}
