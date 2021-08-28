@@ -1,0 +1,10 @@
+<div class="wrap-vert-sm"></div>
+<hr class="greek-divider full-w">
+<div class="wrap-vert-sm"></div>
+<div class="col" ng-if="projectItem.title !== 'see-more'">
+    <div class="title rg">{{projectItem.title}}</div>
+    <div class="subtitle rg">{{projectItem.description}}</div>
+</div>
+<div class="col" ng-if="projectItem.title == 'see-more'">
+    <div class="title rg pri">See more projects (+)</div>
+</div>

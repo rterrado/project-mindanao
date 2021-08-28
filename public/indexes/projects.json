@@ -1,0 +1,45 @@
+{
+	"projectListingTemplate":"standardListingTemplate",
+	"index": {
+		"zamboanga":{
+			"zamboangaCity":{
+				"zamboanga-airport-project":{
+					"title":"Zamboanga International Airport",
+					"description":"This is the biggest airport to be built by Robinsons",
+					"image":"none",
+					"handle":"zamboanga-airport-project",
+					"status":"Proposed"
+				},
+				"sm-city-zamboanga":{
+					"title":"SM City Zamboanga",
+					"description":"First SM Mall in Zamboanga Region",
+					"image":"none",
+					"handle":"sm-city-zamboanga",
+					"status":"Under-construction"
+				},
+				"city-mall-zamboanga":{
+					"title":"City Mall Zamboanga",
+					"description":"Third City Mall in Zamboanga City",
+					"image":"none",
+					"handle":"city-mall-zamboanga",
+					"status":"Under-construction"
+				},
+				"see-more":{
+					"title":"see-more"
+				}
+			},
+			"zamboangaDelSur":{
+				"robinsons-place-pagadian":{
+					"title":"Robinsons Place Pagadian",
+					"description":"First Robinsons Mall in Zamboanga region",
+					"image":"none",
+					"handle":"robinsons-place-pagadian",
+					"status":"Proposed"
+				},
+				"see-more":{
+					"title":"see-more"
+				}
+			}
+		}
+	}
+}
